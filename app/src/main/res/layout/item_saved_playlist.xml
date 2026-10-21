@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp" android:focusable="true" android:clickable="true" android:background="?android:attr/selectableItemBackground">
+
+    <!-- ลดขนาดรูปโลโก้ลงเหลือ 64dp เพื่อเพิ่มพื้นที่แสดงชื่อ -->
+    <ImageView android:id="@+id/logo" android:layout_width="64dp" android:layout_height="64dp" android:layout_marginEnd="16dp" android:scaleType="centerCrop" />
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+
+        <!-- เพิ่ม singleLine, maxLines, และ ellipsize ป้องกันตัวหนังสือพังเป็นแนวตั้ง -->
+        <TextView android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold" android:singleLine="true" android:maxLines="1" android:ellipsize="end" />
+
+        <TextView android:id="@+id/author" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="#888888" android:layout_marginTop="3dp" android:singleLine="true" android:maxLines="1" android:ellipsize="end" />
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/btnMenu" android:layout_width="48dp" android:layout_height="48dp" android:gravity="center" android:text="⋮" android:textColor="#FFFFFF" android:textSize="22sp" android:focusable="true" android:clickable="true" android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+</LinearLayout>

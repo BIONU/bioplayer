@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BIOplayer</string>
+    <string name="add_playlist">Add list</string>
+    <string name="add_from_url">Add list from URL</string>
+    <string name="load">Load</string>
+    <string name="pick_file">Add list from file</string>
+    <string name="loading">Loading playlist…</string>
+    <string name="load_failed">Failed to load playlist: %1$s</string>
+    <string name="empty_playlist">No playlists yet. Tap “Add list” to get started.</string>
+    <string name="remove">Remove</string>
+    <string name="remove_confirm">Remove \"%1$s\" from your lists?</string>
+</resources>

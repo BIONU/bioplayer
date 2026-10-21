@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#000000">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="12dp" android:background="#1A1A1A">
+
+        <!-- ปุ่มย้อนกลับ: ถ้ากำลังค้นหาอยู่ ใช้ปิดช่องค้นหาก่อน ไม่งั้นออกจากหน้านี้ -->
+        <Button android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:text="←" android:textColor="#FFFFFF" android:background="?android:attr/selectableItemBackground" android:focusable="true" />
+
+        <!-- ชื่อหมวดหมู่ (โหมดปกติ) -->
+        <TextView android:id="@+id/groupTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" android:ellipsize="end" android:maxLines="1" />
+
+        <!-- ช่องค้นหา (ซ่อนไว้ก่อน กดไอคอนแว่นขยายถึงจะโผล่แทนที่ชื่อหมวดหมู่) -->
+        <EditText android:id="@+id/searchEditText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:textColor="#FFFFFF" android:textColorHint="#888888" android:hint="ค้นหา..." android:background="@android:color/transparent" android:singleLine="true" android:textSize="16sp" android:visibility="gone" />
+
+        <!-- ปุ่มแว่นขยาย: เปิด/ปิดโหมดค้นหา -->
+        <ImageButton android:id="@+id/btnSearchIcon" android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_menu_search" android:background="?android:attr/selectableItemBackground" android:contentDescription="ค้นหา" />
+
+        <!-- ปุ่มสลับ Grid/List -->
+        <ImageButton android:id="@+id/btnToggleLayout" android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_dialog_dialer" android:background="?android:attr/selectableItemBackground" android:contentDescription="สลับมุมมอง" />
+
+        <!-- ปุ่มรีเฟรช: โชว์เฉพาะหน้าแรกของ playlist (ที่มี source ให้ดึงข้อมูลใหม่ได้) ไม่ใช่หน้ารวม/หน้าย่อย -->
+        <ImageButton android:id="@+id/btnRefresh" android:layout_width="48dp" android:layout_height="48dp" android:src="@android:drawable/ic_popup_sync" android:tint="#FFFFFF" android:background="?android:attr/selectableItemBackground" android:contentDescription="รีเฟรช" android:visibility="gone" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:padding="4dp" />
+
+</LinearLayout>
